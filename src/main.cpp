@@ -69,9 +69,6 @@ void send_reply() {
 }
 
 void send_message(const char *error_message, bool error) {
-    if (!error) {
-        return;
-    }
     Serial.write(byte(STX));
     if (error) {
         Serial.write(byte('e'));
